@@ -8,6 +8,6 @@ while (pq.size()){
 	int curdist = pq.top().first, N = pq.top().second; pq.pop();
 	if (DIST[N] != curdist) continue;
 	for (auto E: adjlist[N]){
-		if (DIST[E.first] > DIST[N] + E.second) pq.emplace(DIST[E.first] = DIST[N] + E.second, E.first);
+		if (DIST[E.first] > curdist + E.second) pq.emplace(DIST[E.first] = curdist + E.second, E.first);
 	}
 }
