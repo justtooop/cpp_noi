@@ -1,6 +1,8 @@
 typedef pair <int, int> pi;
 typedef vector <int> vi;
-vi adjlist[MAXN+1], DIST(MAXN+1, 2e9); // Where MAXN is the maximum number of nodes
+typedef vector <pi> vpi;
+vpi adjlist[MAXN+1]; // .first = node, .second = distance
+vi DIST(MAXN+1, 2e9); // Where MAXN is the maximum number of nodes
 priority_queue <pi, vector <pi>, greater <pi> > pq;
 pq.emplace(0, source);
 DIST[source] = 0;
